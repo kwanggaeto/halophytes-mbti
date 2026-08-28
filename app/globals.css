@@ -57,7 +57,7 @@ button {
   place-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: clamp(18px, 2.5vw, 30px);
+  border-radius: clamp(9px, 1.25vw, 15px);
   background:
     radial-gradient(circle at 50% 30%, #ffffff 0, transparent 60%),
     #e4ebe4;
