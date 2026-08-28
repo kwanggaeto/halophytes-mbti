@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "typecheck": "tsc --noEmit",
-    "preview": "npm run build && wrangler pages dev out",
-    "deploy": "npm run build && wrangler pages deploy out --project-name halophytes-mbti"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:pages": "npm run build && wrangler pages deploy out --project-name halophytes-mbti"
   },
   "dependencies": {
     "next": "16.3.3",

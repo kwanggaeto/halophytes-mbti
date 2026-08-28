@@ -29,8 +29,8 @@ npm run build
 npm run deploy
 ```
 
-빌드 산출물은 `out`에 생성되며 Cloudflare Pages 프로젝트 `halophytes-mbti`로 배포됩니다.
+빌드 산출물은 `out`에 생성되며 Cloudflare Worker `halophytes-mbti`의 정적 자산으로 배포됩니다. Cloudflare Git 빌드 설정은 `npm run build` 후 `npx wrangler deploy`를 실행하면 됩니다. 기존 Pages 프로젝트에 직접 업로드해야 할 때는 `npm run deploy:pages`를 사용합니다.
 
 ## 이미지 저장 방식
 
-현재 18개 이미지는 `public/results`에 WebP 정적 자산으로 포함합니다. 이미지 수가 적고 배포본 전체가 약 4.4MB라서 별도 R2 버킷보다 구조가 단순하며 Pages CDN 캐시를 바로 활용할 수 있습니다. 운영 중 이미지가 자주 바뀌거나, 관리자 업로드·대용량 원본 보관·앱 배포와 독립된 이미지 갱신이 필요해질 때 R2로 이전하는 것을 권장합니다.
+현재 18개 이미지는 `public/results`에 WebP 정적 자산으로 포함합니다. 이미지 수가 적고 배포본 전체가 약 4.4MB라서 별도 R2 버킷보다 구조가 단순하며 Workers Static Assets 캐시를 바로 활용할 수 있습니다. 운영 중 이미지가 자주 바뀌거나, 관리자 업로드·대용량 원본 보관·앱 배포와 독립된 이미지 갱신이 필요해질 때 R2로 이전하는 것을 권장합니다.
