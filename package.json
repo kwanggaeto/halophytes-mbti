@@ -1,0 +1,27 @@
+{
+  "name": "halophytes-mbti",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "preview": "npm run build && wrangler pages dev out",
+    "deploy": "npm run build && wrangler pages deploy out --project-name halophytes-mbti"
+  },
+  "dependencies": {
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "wrangler": "4.127.1"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
