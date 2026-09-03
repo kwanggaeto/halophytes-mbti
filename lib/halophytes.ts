@@ -7,24 +7,14 @@ export type HalophyteResult = Readonly<{
 }>;
 
 const RESULT_DEFINITIONS = [
-  ["1472", "퉁퉁마디"],
-  ["2085", "갯질경"],
-  ["2639", "갯개미취"],
-  ["3157", "나문재"],
-  ["3841", "갯잔디"],
-  ["4268", "칠면초"],
-  ["5013", "사데풀"],
-  ["5576", "해홍나물"],
-  ["6194", "천일사초"],
-  ["6742", "골풀"],
-  ["7086", "갯능쟁이"],
-  ["7521", "갯메꽃"],
-  ["8195", "해당화"],
-  ["8463", "모새달"],
-  ["8937", "갯방풍"],
-  ["9214", "갯씀바귀"],
-  ["9568", "갯까치수염"],
-  ["9840", "번행초"],
+  ["1472", "칠면초"],
+  ["2085", "갯잔디"],
+  ["2639", "지채"],
+  ["3157", "퉁퉁마디"],
+  ["3841", "순비기나무"],
+  ["4268", "해홍나물"],
+  ["5013", "갯질경"],
+  ["5576", "갈대"]
 ] as const;
 
 export const HALOPHYTES: readonly HalophyteResult[] = RESULT_DEFINITIONS.map(
@@ -32,8 +22,8 @@ export const HALOPHYTES: readonly HalophyteResult[] = RESULT_DEFINITIONS.map(
     id,
     index: resultIndex + 1,
     name,
-    imagePath: `/results/${id}.webp`,
-    downloadFilename: `halophytes-mbti-${id}.webp`,
+    imagePath: `/results/${id}.png`,
+    downloadFilename: `halophytes-mbti-${id}.png`,
   }),
 );
 

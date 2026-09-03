@@ -45,8 +45,8 @@ export default async function ResultPage({ params }: ResultPageProps) {
           className="result-image"
           src={halophyte.imagePath}
           alt={`${halophyte.name} 염생식물 일러스트`}
-          width={1122}
-          height={1402}
+          width={941}
+          height={1672}
           fetchPriority="high"
         />
       </section>
